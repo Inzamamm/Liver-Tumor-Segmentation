@@ -1,0 +1,27 @@
+seed: 42
+image_size: 256
+in_channels: 1
+batch_size: 8
+num_epochs: 100
+learning_rate: 0.0001
+weight_decay: 0.00001
+num_workers: 2
+threshold: 0.5
+loss_dice_weight: 0.7
+loss_bce_weight: 0.3
+attention_heads: 4
+base_channels: 64
+train_split: 0.70
+val_split: 0.15
+test_split: 0.15
+window_min: -200
+window_max: 250
+
+# Update these paths after downloading the Kaggle dataset.
+# Expected formats supported:
+# 1) images/*.png and masks/*.png
+# 2) images/*.jpg and masks/*.jpg
+# 3) volume files such as .nii/.nii.gz with matching masks
+image_dir: ./data/images
+mask_dir: ./data/masks
+output_dir: ./outputs
